@@ -1,5 +1,5 @@
 {
-  "name": "InitialNodeapp",
+  "name": "BasicExpress",
   "version": "0.0.1",
   "description": "Starting point for nodejs application.",
   "main": "app.js",
