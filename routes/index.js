@@ -1,6 +1,9 @@
-module.exports = function(app){
+var express = require('express');
+var router = express.Router();
 
-    app.get('/', require('./home').get);
+//home
+router.get('/', function(req, res) {
+    res.render('index', {title: 'Initial Express app'});
+});
 
-    //app.post('/', require('./home').post);
-};
+module.exports = router;
