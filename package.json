@@ -1,10 +1,10 @@
 {
   "name": "expressboilerplate",
   "version": "0.0.2",
-  "description": "Starting point for nodejs application.",
+  "description": "Starting point for nodejs&express application.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/www.js"
   },
   "keywords": [
     "initial",
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frenchbread/BasicExpressApp.git"
+    "url": "git+https://github.com/frenchbread/ExpressBoilerplate"
   },
   "bugs": {
-    "url": "https://github.com/frenchbread/BasicExpressApp/issues"
+    "url": "https://github.com/frenchbread/ExpressBoilerplate/issues"
   },
-  "homepage": "https://github.com/frenchbread/BasicExpressApp#readme"
+  "homepage": "https://github.com/frenchbread/ExpressBoilerplate#readme"
 }
