@@ -9,15 +9,21 @@ A simple express application - starting point for NodeJS development. It contain
 
 1. Clone the repo:
 
-    `git clone https://github.com/frenchbread/ExpressBoilerplate.git`
+    ```
+    git clone https://github.com/frenchbread/ExpressBoilerplate.git
+    ```
 
 2. Install dependencies:
 
-    `npm install`
+    ```
+    npm install
+    ```
 
 3. Run the app:
 
-    `node ./bin/www.js`
+    ```
+    node ./bin/www.js
+    ```
 
 ## Full list of modules used
 
