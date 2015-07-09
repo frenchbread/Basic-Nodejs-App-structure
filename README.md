@@ -1,11 +1,12 @@
 #Express Boilerplate
 
 A simple express application - starting point for NodeJS development. It contains some of the most poplar and needed npm
- packages - database schemas and management, logging, routing, static files, session etc.
+ packages - logging, routing, static files, session etc.
 
 ## Installation
 
-**Note! You should have [MogngoDB](https://www.mongodb.org/) installed and running!**
+**Note! If you Are going to use [mongoose](https://github.com/Automattic/mongoose) and/or [mongodb](https://www.mongodb.org/)
+ you need to `npm install mongoose` and/or `npm install mongodb`.**
 
 1. Clone the repo:
 
