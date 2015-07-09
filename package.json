@@ -1,6 +1,6 @@
 {
   "name": "expressboilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Starting point for nodejs&express application.",
   "main": "app.js",
   "scripts": {
@@ -24,7 +24,6 @@
     "jade": "^1.9.2",
     "morgan": "^1.5.2",
     "nconf": "^0.7.1",
-    "nodemon": "*",
     "serve-favicon": "^2.3.0",
     "winston": "^1.0.0"
   },
