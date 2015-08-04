@@ -1,11 +1,11 @@
-var express = require('express');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var expressSession = require('express-session');
-var config = require('./config');
-var app = express();
+var express         = require('express');
+var cookieParser    = require('cookie-parser');
+var bodyParser      = require('body-parser');
+var favicon         = require('serve-favicon');
+var logger          = require('morgan');
+var expressSession  = require('express-session');
+var config          = require('./config');
+var app             = express();
 
 app.set('views', __dirname + '/views');
 app.engine('jade', require('jade').__express);

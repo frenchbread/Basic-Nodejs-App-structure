@@ -1,23 +1,23 @@
-var mongoose = require('../lib/mongoose'),
-    Schema = mongoose.Schema;
+var mongoose    = require('../lib/mongoose'),
+    Schema      = mongoose.Schema;
 
 var schema = new Schema({
     title: {
-        type: String,
-        required: true
+        type        : String,
+        required    : true
     },
     details: {
-        type: String,
+        type        : String
     },
     time:{
-        type: String
+        type        : String
     },
     date:{
-        type: Date
+        type        : Date
     },
     created: {
-        type: Date,
-        default: Date.now
+        type        : Date,
+        default     : Date.now
     }
 });
 
