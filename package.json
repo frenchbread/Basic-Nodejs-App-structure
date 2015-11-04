@@ -1,6 +1,6 @@
 {
   "name": "expressboilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Starting point for nodejs&express application.",
   "main": "app.js",
   "scripts": {
