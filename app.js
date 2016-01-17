@@ -7,6 +7,8 @@ var expressSession  = require('express-session');
 var config          = require('./config');
 var app             = express();
 
+var ENV = config.get('ENV');
+
 app.set('views', __dirname + '/views');
 app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');
@@ -17,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/public'));
 
-config.get('ENV') == 'development' ? app.use(logger('dev')) : app.use(logger('combined'));
+ENV === 'development' ? app.use(logger('dev')) : app.use(logger('combined'));
 
 app.use(expressSession({secret: 'mySecretKey', saveUninitialized: true, resave: true}));
 
@@ -30,7 +32,7 @@ app.use(function(req, res, next) {
 });
 
 
-if (config.get('ENV') === 'production') {
+if (ENV === 'production') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', { error: err });
