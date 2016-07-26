@@ -1,9 +1,10 @@
 extends layout/base.jade
 
 block title
-    title=error
+    title Error
+
 block content
     .box
         .content
-            h1 Error
+            h1=error.message
             p=error

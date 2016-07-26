@@ -3,7 +3,10 @@ const router  = express.Router();
 
 //home
 router.get('/', function(req, res) {
-    res.render('index', {title: 'Initial Express app'});
+    res.render('index', {
+      header: 'express-boilerplate',
+      description: 'Your basic web-app structure.'
+    });
 });
 
 module.exports = router;
