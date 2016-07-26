@@ -7,19 +7,19 @@
 1. Clone the repo:
 
     ```
-    git clone https://github.com/frenchbread/express-boilerplate.git
+    $ git clone https://github.com/frenchbread/express-boilerplate.git
     ```
 
 2. Install dependencies:
 
     ```
-    cd express-boilerplate && npm install
+    $ cd express-boilerplate && npm install
     ```
 
 3. Run the app:
 
     ```
-    node start
+    $ node start
     ```
 
 ## License
