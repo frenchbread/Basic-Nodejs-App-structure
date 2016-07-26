@@ -23,5 +23,4 @@
     ```
 
 ## License
-
-ExpressBoilerplate is freely distributable under the terms of the [MIT license](https://github.com/frenchbread/ExpressBoilerplate/blob/master/LICENSE.md).
+[MIT](https://github.com/frenchbread/ExpressBoilerplate/blob/master/LICENSE.md)
