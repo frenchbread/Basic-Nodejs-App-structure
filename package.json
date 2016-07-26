@@ -4,7 +4,7 @@
   "description": "Quick start for express app.",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www.js"
+    "start": "babel-node --presets es2015 ./bin/www.js"
   },
   "keywords": [
     "quick",
@@ -22,7 +22,9 @@
     "express": "^4.12.3",
     "jade": "^1.9.2",
     "morgan": "^1.6.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "babel-cli": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0"
   },
   "repository": {
     "type": "git",

@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-const app = require('../app');
-const debug = require('debug')('expressboilerplate:server');
-const http = require('http');
+// const app = require('../app');
+import app from '../app';
+import debug from 'debug';
+import http from 'http';
 
-const config = require('../config');
+import config from '../config';
 
 const port = normalizePort(process.env.PORT || config.port);
 app.set('port', port);

@@ -1,13 +1,13 @@
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
+import express from 'express';
+import path from 'path';
+import favicon from 'serve-favicon';
+import logger from 'morgan';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+
+import config from './config';
 
 const app = express();
-
-const config = require('./config');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
