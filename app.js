@@ -4,6 +4,8 @@ import favicon from 'serve-favicon';
 import logger from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
+import session from 'express-session';
+import lusca from 'lusca';
 
 import config from './config';
 
@@ -20,6 +22,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
+app.use(session({
+    secret: 'abc',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(lusca({
+  csrf: true,
+  csp: { policy: {'default-src': '*'} },
+  xframe: 'SAMEORIGIN',
+  p3p: 'ABCDEF',
+  hsts: {maxAge: 31536000, includeSubDomains: true, preload: true},
+  xssProtection: true,
+  nosniff: true
+}));
 
 app.use('/', require('./routes'));
 
