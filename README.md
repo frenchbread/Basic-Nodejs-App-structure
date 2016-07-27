@@ -2,6 +2,8 @@
 
 > Quick start for express application.
 
+[![NPM](https://nodei.co/npm/expressboilerplate.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/expressboilerplate/)
+
 ## Usage
 
 1. Clone the repo:
