@@ -1,42 +1,57 @@
-var express         = require('express');
-var cookieParser    = require('cookie-parser');
-var bodyParser      = require('body-parser');
-var favicon         = require('serve-favicon');
-var logger          = require('morgan');
-var expressSession  = require('express-session');
-var config          = require('./config');
-var app             = express();
+import express from 'express';
+import path from 'path';
+import favicon from 'serve-favicon';
+import logger from 'morgan';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
 
-var ENV = config.get('ENV');
+import config from './config';
 
-app.set('views', __dirname + '/views');
-app.engine('jade', require('jade').__express);
+const app = express();
+
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(favicon(__dirname + '/public/favicon.png'));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
+app.use(logger('dev'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
-app.use(express.static(__dirname + '/public'));
-
-ENV === 'development' ? app.use(logger('dev')) : app.use(logger('combined'));
-
-app.use(expressSession({secret: 'mySecretKey', saveUninitialized: true, resave: true}));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', require('./routes'));
 
+// catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Page not found');
-    err.status = 404;
-    next(err);
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
+// error handlers
 
-if (ENV === 'production') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', { error: err });
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
     });
+  });
 }
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
 
 module.exports = app;
