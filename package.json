@@ -1,6 +1,6 @@
 {
   "name": "expressboilerplate",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Quick start for express app.",
   "main": "app.js",
   "scripts": {
@@ -39,6 +39,7 @@
   "homepage": "https://github.com/frenchbread/express-boilerplate#readme",
   "devDependencies": {
     "ava": "^0.15.2",
+    "cheerio": "^0.20.0",
     "request": "^2.74.0"
   }
 }
