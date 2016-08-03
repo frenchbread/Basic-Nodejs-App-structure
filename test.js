@@ -1,5 +1,5 @@
 import test from 'ava';
-import r from 'request';
+import got from 'got';
 import cheerio from 'cheerio';
 
 import config from './config';
@@ -7,13 +7,17 @@ import config from './config';
 const url = config.host + ':' + config.port;
 const errUrl = url + '/random-page';
 
-async function getPageAsElement (url) {
-  return await new Promise((resolve, reject) => {
-    r(url, (err, res, body) => {
-      if (err) reject(err);
-      resolve(cheerio.load(body));
+ function getPageAsElement (url) {
+  return got(url)
+    .then((res) => {
+      return cheerio.load(res.body);
+    })
+    .catch((err) => {
+      if (err.statusCode === 404){
+        return cheerio.load(err.response.body);
+      }
+      console.error(err);
     });
-  });
 };
 
 // OK pages (200)
@@ -39,7 +43,7 @@ test('p text is correct', async t => {
 });
 
 // Error pages (404)
-test('404 page has corrct title', async t => {
+test('404 page has correct title', async t => {
 
   const $ = await getPageAsElement(errUrl);
 
