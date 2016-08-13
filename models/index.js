@@ -1,4 +1,4 @@
-export default function () {
+module.exports = function () {
   return {
     title: 'express-boilerplate',
     header: 'express-boilerplate',
