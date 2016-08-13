@@ -4,6 +4,8 @@ import cheerio from 'cheerio';
 
 import config from './config';
 
+import IndexModel from './models';
+
 const url = config.host + ':' + config.port;
 const errUrl = url + '/random-page';
 
@@ -25,21 +27,21 @@ test('Page title is correct', async t => {
 
   const $ = await getPageAsElement(url);
 
-  t.is($('title').text(), 'express-boilerplate');
+  t.is($('title').text(), IndexModel().title);
 });
 
 test('h1 text is correct', async t => {
 
   const $ = await getPageAsElement(url);
 
-  t.is($('h1').text(), 'express-boilerplate');
+  t.is($('h1').text(), IndexModel().header);
 });
 
 test('p text is correct', async t => {
 
   const $ = await getPageAsElement(url);
 
-  t.is($('p').text(), 'Your basic web-app structure.');
+  t.is($('p').text(), IndexModel().description);
 });
 
 // Error pages (404)
