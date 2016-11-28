@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "babel-node --presets es2015 ./bin/www.js",
-    "test": "ava"
+    "test": "ava",
+    "lint": "eslint ."
   },
   "keywords": [
     "quick",
@@ -40,7 +41,11 @@
   "homepage": "https://github.com/frenchbread/express-boilerplate#readme",
   "devDependencies": {
     "ava": "^0.15.2",
+    "babel-eslint": "^7.1.1",
     "cheerio": "^0.20.0",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
     "request": "^2.74.0"
   }
 }
