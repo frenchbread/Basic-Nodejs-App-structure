@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/expressboilerplate.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/expressboilerplate/)
 
-## Usage
+## Development
 
 1. Clone the repo:
 
@@ -21,7 +21,7 @@
 3. Run the app:
 
   ```
-  $ npm start
+  $ npm run dev
   ```
 
 ## Tests
@@ -29,6 +29,19 @@
 ```
 $ npm test
 ```
+
+## Build & Run in production
+
+Build
+```
+$ npm run build
+```
+
+Run
+```
+$ npm start
+```
+
 
 ## License
 [MIT](https://github.com/frenchbread/ExpressBoilerplate/blob/master/LICENSE.md)
