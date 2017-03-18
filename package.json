@@ -8,6 +8,7 @@
     "start": "node index.js",
     "dev": "nodemon --exec babel-node --presets latest ./src/bin/www",
     "build": "rm -rf ./lib && node_modules/babel-cli/bin/babel.js src --out-dir lib",
+    "prepublish": "npm run build",
     "test": "./node_modules/.bin/ava test.js --verbose"
   },
   "keywords": [
