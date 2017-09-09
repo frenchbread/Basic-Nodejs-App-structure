@@ -1,5 +1,7 @@
+import pckg from '../../package.json'
+
 module.exports = () => ({
-  title: 'express-boilerplate',
-  header: 'express-boilerplate',
-  description: 'Your basic web-app structure.'
+  title: 'Home',
+  header: pckg.name,
+  description: pckg.description
 })

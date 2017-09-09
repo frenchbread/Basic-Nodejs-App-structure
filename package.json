@@ -1,6 +1,6 @@
 {
   "name": "expressboilerplate",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Quick start for express app.",
   "main": "app.js",
   "scripts": {
@@ -11,43 +11,28 @@
     "prepublish": "npm run build",
     "test": "./node_modules/.bin/ava test.js --verbose"
   },
-  "keywords": [
-    "quick",
-    "start",
-    "node",
-    "express",
-    "application"
-  ],
-  "author": "Damir Mustafin",
+  "repository": "https://github.com/frenchbread/express-boilerplate.git",
+  "author": "Damir Mustafin <damir.mustafin@protonmail.ch>",
   "license": "MIT",
-  "dependencies": {
-    "ava": "^0.18.2",
-    "axios": "^0.15.3",
-    "body-parser": "^1.13.3",
-    "cheerio": "^0.22.0",
-    "cookie-parser": "^1.3.5",
-    "debug": "^2.2.0",
-    "express": "^4.12.3",
-    "express-session": "^1.14.0",
-    "lusca": "^1.4.1",
-    "morgan": "^1.6.1",
-    "pug": "^2.0.0-beta6",
-    "serve-favicon": "^2.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/frenchbread/express-boilerplate"
-  },
-  "bugs": {
-    "url": "https://github.com/frenchbread/express-boilerplate/issues"
-  },
-  "homepage": "https://github.com/frenchbread/express-boilerplate#readme",
   "devDependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-eslint": "^6.1.2",
-    "babel-preset-latest": "^6.22.0",
-    "eslint": "^3.4.0",
-    "eslint-config-airbnb-base": "^5.0.3",
-    "eslint-plugin-import": "^2.2.0"
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^4.6.1",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "dependencies": {
+    "ava": "^0.22.0",
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.0.1",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "lusca": "^1.5.1",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.3"
   }
 }
